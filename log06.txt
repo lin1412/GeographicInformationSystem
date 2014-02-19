@@ -1,0 +1,322 @@
+; Demo script 6
+;
+; Specify boundaries of coordinate space:
+world	1090000W	1050000W	370000N	410000N
+
+GIS Program
+dbFile:	db.txt
+script:	DemoScript06.txt
+log   :	log06.txt
+Start time: 2013/04/25 14:13:30
+Quadtree children are printed in the order SW SE NE NW
+--------------------------------------------------------------------------------
+
+Latitude/longitude values in index entries are shown as signed integers, in total seconds.
+
+World boundaries are set to:
+			147600
+	-392400			-378000
+			133200
+--------------------------------------------------------------------------------
+
+;
+; Import a sizeable number of records:
+Command 1:	import	CO_Ouray.txt
+
+Imported Features by name: 567
+Longest probe sequence:    5
+Imported Locations:        567
+--------------------------------------------------------------------------------
+;
+; Take a look at the indices, if you like:
+;debug	quad
+;debug	hash
+;
+; Perform some square-region searches; each searches a
+; larger region centered at the same point:
+Command 2:	what_is_in	380108N	1074035W	15	15
+
+	The following 7 features were found in (1074035W +/- 15, 380108N +/- 15)
+40330:  Portland Creek CO  380115North  1074029West
+70976:  Whippoorwill Mine CO  380122North  1074031West
+71713:  Ouray Hot Springs CO  380116North  1074021West
+45366:  Oak Creek CO  380111North  1074033West
+10709:  Canyon Creek CO  380110North  1074033West
+13590:  Uncompahgre Gorge CO  380108North  1074035West
+40184:  Box Canyon CO  380106North  1074044West
+--------------------------------------------------------------------------------
+Command 3:	what_is_in	380108N	1074035W	30	30
+
+	The following 15 features were found in (1074035W +/- 30, 380108N +/- 30)
+56752:  KURA-FM (Ouray) CO  380122North  1074014West
+57123:  Ouray CO  380122North  1074017West
+74676:  Ouray Volunteer Fire Department CO  380123North  1074016West
+45515:  Cascade Creek CO  380138North  1074025West
+74171:  City of Ouray CO  380138North  1074024West
+40330:  Portland Creek CO  380115North  1074029West
+70976:  Whippoorwill Mine CO  380122North  1074031West
+71713:  Ouray Hot Springs CO  380116North  1074021West
+45366:  Oak Creek CO  380111North  1074033West
+10709:  Canyon Creek CO  380110North  1074033West
+13590:  Uncompahgre Gorge CO  380108North  1074035West
+40184:  Box Canyon CO  380106North  1074044West
+45783:  Mineral Farm CO  380043North  1074038West
+70036:  Mineral Farm Mine CO  380042North  1074038West
+70617:  Prince Lode Claims Mine CO  380053North  1074018West
+--------------------------------------------------------------------------------
+Command 4:	what_is_in	380108N	1074035W	60	60
+
+	The following 24 features were found in (1074035W +/- 60, 380108N +/- 60)
+39842:  Sister Peak CO  380142North  1074118West
+45204:  Angel Creek CO  380029North  1074125West
+39488:  Rock of the Ages Mine CO  380156North  1074100West
+52166:  Rock of the Ages Mine CO  380155North  1074100West
+40485:  Cascade Falls CO  380134North  1073952West
+56752:  KURA-FM (Ouray) CO  380122North  1074014West
+57123:  Ouray CO  380122North  1074017West
+74676:  Ouray Volunteer Fire Department CO  380123North  1074016West
+52039:  Amphitheater Campground CO  380121North  1073944West
+39239:  Radium Springs Swimming Pool CO  380145North  1074019West
+41199:  Skyrocket Creek CO  380149North  1074028West
+45515:  Cascade Creek CO  380138North  1074025West
+74171:  City of Ouray CO  380138North  1074024West
+39611:  Speedwell Mine CO  380148North  1074112West
+40330:  Portland Creek CO  380115North  1074029West
+70976:  Whippoorwill Mine CO  380122North  1074031West
+71713:  Ouray Hot Springs CO  380116North  1074021West
+45366:  Oak Creek CO  380111North  1074033West
+10709:  Canyon Creek CO  380110North  1074033West
+13590:  Uncompahgre Gorge CO  380108North  1074035West
+40184:  Box Canyon CO  380106North  1074044West
+45783:  Mineral Farm CO  380043North  1074038West
+70036:  Mineral Farm Mine CO  380042North  1074038West
+70617:  Prince Lode Claims Mine CO  380053North  1074018West
+--------------------------------------------------------------------------------
+Command 5:	what_is_in	380108N	1074035W	240	240
+
+	The following 139 features were found in (1074035W +/- 240, 380108N +/- 240)
+70743:  Senorita Mine CO  380452North  1074104West
+70383:  News Boy Mine CO  380425North  1074101West
+71476:  Happy Jack Mine CO  380410North  1074052West
+69807:  Granger Mine CO  380421North  1074005West
+71594:  Hummingbird Mine CO  380348North  1074004West
+43669:  Portland CO  380453North  1074205West
+56870:  Ponderosa Heliport CO  380504North  1074205West
+44296:  Cutler Creek CO  380506North  1074221West
+44720:  Dalpaz Ranch CO  380500North  1074242West
+70499:  Park Placer Mine CO  380450North  1074230West
+43549:  Black Lake CO  380422North  1074212West
+41479:  Corbett Creek CO  380333North  1074133West
+43800:  Dexter Creek CO  380336North  1074133West
+69462:  Dad Town Mine CO  380314North  1074125West
+70156:  Nasby Mine CO  380314North  1074125West
+42024:  Little Gem Mine CO  380315North  1074222West
+43317:  Erickson Ranch CO  380340North  1074224West
+41911:  Sequin Mine CO  380247North  1074227West
+45667:  Moonshine Park CO  380328North  1074334West
+41355:  Whitehouse Mountain CO  380114North  1074416West
+39727:  Twin Peaks CO  380138North  1074157West
+39842:  Sister Peak CO  380142North  1074118West
+40071:  Alpine Mine CO  380021North  1074235West
+11519:  Squaw Gulch CO  380004North  1074139West
+45204:  Angel Creek CO  380029North  1074125West
+69225:  Boston Sunday Mine CO  380342North  1073732West
+44068:  Almadi Mine CO  380336North  1073915West
+44181:  Old Maid Mine CO  380332North  1073907West
+68988:  Amador Mine CO  380317North  1073922West
+69691:  El Mahdi Mine CO  380335North  1073915West
+40964:  Cascade Mountain CO  380226North  1073833West
+51918:  Bridge of Heaven CO  380206North  1073757West
+43084:  Wedge Mine CO  380330North  1074002West
+43953:  Bachelor Mine CO  380338North  1073941West
+42965:  Pony Express Mine CO  380323North  1074030West
+43435:  Syracuse Mine CO  380332North  1074041West
+70268:  Neodesha Mine CO  380327North  1074029West
+42834:  American Lead and Zinc Mill CO  380318North  1074111West
+43195:  Lake Lenore CO  380326North  1074057West
+42486:  American Nettie Mine CO  380246North  1074021West
+69102:  American-Nettie Mine CO  380245North  1074021West
+69347:  Chipeta Mine CO  380243North  1074022West
+69577:  Donald Mine CO  380243North  1074022West
+69921:  Memphis Mine CO  380243North  1074022West
+70859:  West View Mine CO  380243North  1074022West
+42255:  Schofield Mine CO  380241North  1074019West
+42608:  Sieberg Mine CO  380244North  1074033West
+42141:  Wanakah Mine CO  380231North  1074030West
+41633:  Silvershield Mill CO  380227North  1074059West
+42722:  Rotary Park CO  380240North  1074052West
+39488:  Rock of the Ages Mine CO  380156North  1074100West
+52166:  Rock of the Ages Mine CO  380155North  1074100West
+39371:  Elkhorn Ranch CO  380215North  1074040West
+41754:  Bridalveil Creek CO  380213North  1074042West
+41085:  The Blowout CO  380223North  1073942West
+42371:  Jonathan Mine CO  380239North  1074018West
+40611:  Chief Ouray Mine CO  380150North  1073927West
+40485:  Cascade Falls CO  380134North  1073952West
+56752:  KURA-FM (Ouray) CO  380122North  1074014West
+57123:  Ouray CO  380122North  1074017West
+74676:  Ouray Volunteer Fire Department CO  380123North  1074016West
+52039:  Amphitheater Campground CO  380121North  1073944West
+39239:  Radium Springs Swimming Pool CO  380145North  1074019West
+41199:  Skyrocket Creek CO  380149North  1074028West
+45515:  Cascade Creek CO  380138North  1074025West
+74171:  City of Ouray CO  380138North  1074024West
+39611:  Speedwell Mine CO  380148North  1074112West
+40330:  Portland Creek CO  380115North  1074029West
+70976:  Whippoorwill Mine CO  380122North  1074031West
+71713:  Ouray Hot Springs CO  380116North  1074021West
+45366:  Oak Creek CO  380111North  1074033West
+10709:  Canyon Creek CO  380110North  1074033West
+13590:  Uncompahgre Gorge CO  380108North  1074035West
+40184:  Box Canyon CO  380106North  1074044West
+39958:  Cutler Mine CO  380001North  1074115West
+45783:  Mineral Farm CO  380043North  1074038West
+70036:  Mineral Farm Mine CO  380042North  1074038West
+13343:  Bear Creek Falls CO  380000North  1073937West
+70617:  Prince Lode Claims Mine CO  380053North  1074018West
+40730:  Portland Mine CO  380109North  1073834West
+40845:  The Amphitheater CO  380117North  1073857West
+56378:  Horsethief Trail CO  380145North  1073745West
+68109:  Seven-thirty Mine CO  380002North  1073742West
+13095:  Bear Creek Trail CO  375953North  1073722West
+13222:  Grizzly Bear Mine CO  375953North  1073818West
+13748:  Red Mountain Creek CO  375917North  1073914West
+13905:  Climax Creek CO  375912North  1073851West
+62267:  Homestake Mine CO  375931North  1073833West
+62629:  Jay Eye See Mine CO  375931North  1073833West
+67734:  Yellow Jacket Mine CO  375931North  1073833West
+62512:  Jackpot Mine CO  375930North  1073853West
+12809:  Mother Cline Slide CO  375858North  1073908West
+63720:  Little Balm of Gilead Mine CO  375856North  1073914West
+64339:  Monarch Mine CO  375842North  1073847West
+14060:  Michael Breen Mine CO  375830North  1073806West
+10151:  Bear Creek CO  375957North  1073939West
+12503:  Ralston Creek CO  375957North  1073941West
+13474:  Sutton Mill CO  375956North  1073931West
+63976:  Maud S Mine CO  375929North  1073955West
+59453:  Barhoff Mine CO  375928North  1074036West
+61409:  Excelsior Mine CO  375928North  1074036West
+59700:  Belle of the West Mine CO  375928North  1074025West
+66264:  Saxon Mine CO  375928North  1074027West
+12658:  Silver Gulch CO  375854North  1073923West
+60924:  Dunmore Mine CO  375853North  1073928West
+12932:  West Riverside Slide CO  375814North  1073931West
+14182:  Curran Gulch CO  375817North  1073927West
+14331:  East Riverside Slide CO  375813North  1073928West
+14494:  Hendrick Gulch CO  375756North  1073938West
+14773:  Crystal Lake CO  375731North  1073952West
+14904:  Saint Germain Foundation CO  375729North  1073939West
+52925:  Full Moon Dam CO  375736North  1073956West
+12383:  Half Moon Basin CO  375743North  1074049West
+15034:  Abrams Mountain CO  375744North  1073826West
+17246:  Mineral Creek CO  375754North  1073736West
+14651:  Lucky Twenty Mine CO  375737North  1073910West
+61781:  Guadaloupe Mine CO  375731North  1073853West
+62994:  Keno Mine CO  375720North  1073909West
+3128:  Weehawken Creek CO  375934North  1074200West
+11670:  Lewis Creek CO  375950North  1074152West
+11823:  Thistledown CO  375937North  1074159West
+11949:  Thistledown Creek CO  375947North  1074153West
+12109:  Fall Creek CO  375904North  1074229West
+55238:  Weehawken Pack Trail CO  375952North  1074221West
+3286:  Senator Gulch CO  375902North  1074229West
+10557:  Waterhole Slide CO  375842North  1074301West
+3681:  Bimettalist Mine CO  375850North  1074411West
+59828:  Bi-metallist Mine CO  375850North  1074411West
+62030:  Hawkeye Mine CO  375842North  1074423West
+1759:  Sneffels Creek CO  375818North  1074338West
+11115:  Imogene Creek CO  375818North  1074338West
+10862:  Camp Bird CO  375822North  1074335West
+10986:  Camp Bird Number 14 Level CO  375813North  1074334West
+3921:  Yellow Rose Mine CO  375717North  1074324West
+4161:  Richmond Creek CO  375727North  1074328West
+11271:  Pierson Basin CO  375743North  1074430West
+11390:  United States Mountain CO  375724North  1074421West
+12261:  Hayden Mountain CO  375716North  1074209West
+3802:  Bankers Tunnel CO  375726North  1074307West
+--------------------------------------------------------------------------------
+;
+; Now, perform some searches with non-square regions:
+Command 6:	what_is_in	380206N	1073757W	30	60
+
+	The following 3 features were found in (1073757W +/- 60, 380206N +/- 30)
+40964:  Cascade Mountain CO  380226North  1073833West
+51918:  Bridge of Heaven CO  380206North  1073757West
+56378:  Horsethief Trail CO  380145North  1073745West
+--------------------------------------------------------------------------------
+Command 7:	what_is_in	380206N	1073757W	240	15
+
+	The following 4 features were found in (1073757W +/- 15, 380206N +/- 240)
+51918:  Bridge of Heaven CO  380206North  1073757West
+56378:  Horsethief Trail CO  380145North  1073745West
+68109:  Seven-thirty Mine CO  380002North  1073742West
+14060:  Michael Breen Mine CO  375830North  1073806West
+--------------------------------------------------------------------------------
+Command 8:	what_is_in	380206N	1073757W	60	600
+
+	The following 47 features were found in (1073757W +/- 600, 380206N +/- 60)
+41911:  Sequin Mine CO  380247North  1074227West
+41355:  Whitehouse Mountain CO  380114North  1074416West
+39727:  Twin Peaks CO  380138North  1074157West
+39842:  Sister Peak CO  380142North  1074118West
+40964:  Cascade Mountain CO  380226North  1073833West
+51918:  Bridge of Heaven CO  380206North  1073757West
+42486:  American Nettie Mine CO  380246North  1074021West
+69102:  American-Nettie Mine CO  380245North  1074021West
+69347:  Chipeta Mine CO  380243North  1074022West
+69577:  Donald Mine CO  380243North  1074022West
+69921:  Memphis Mine CO  380243North  1074022West
+70859:  West View Mine CO  380243North  1074022West
+42255:  Schofield Mine CO  380241North  1074019West
+42608:  Sieberg Mine CO  380244North  1074033West
+42141:  Wanakah Mine CO  380231North  1074030West
+41633:  Silvershield Mill CO  380227North  1074059West
+42722:  Rotary Park CO  380240North  1074052West
+39488:  Rock of the Ages Mine CO  380156North  1074100West
+52166:  Rock of the Ages Mine CO  380155North  1074100West
+39371:  Elkhorn Ranch CO  380215North  1074040West
+41754:  Bridalveil Creek CO  380213North  1074042West
+41085:  The Blowout CO  380223North  1073942West
+42371:  Jonathan Mine CO  380239North  1074018West
+40611:  Chief Ouray Mine CO  380150North  1073927West
+40485:  Cascade Falls CO  380134North  1073952West
+56752:  KURA-FM (Ouray) CO  380122North  1074014West
+57123:  Ouray CO  380122North  1074017West
+74676:  Ouray Volunteer Fire Department CO  380123North  1074016West
+52039:  Amphitheater Campground CO  380121North  1073944West
+39239:  Radium Springs Swimming Pool CO  380145North  1074019West
+41199:  Skyrocket Creek CO  380149North  1074028West
+45515:  Cascade Creek CO  380138North  1074025West
+74171:  City of Ouray CO  380138North  1074024West
+39611:  Speedwell Mine CO  380148North  1074112West
+40330:  Portland Creek CO  380115North  1074029West
+70976:  Whippoorwill Mine CO  380122North  1074031West
+71713:  Ouray Hot Springs CO  380116North  1074021West
+45366:  Oak Creek CO  380111North  1074033West
+10709:  Canyon Creek CO  380110North  1074033West
+13590:  Uncompahgre Gorge CO  380108North  1074035West
+40184:  Box Canyon CO  380106North  1074044West
+40730:  Portland Mine CO  380109North  1073834West
+40845:  The Amphitheater CO  380117North  1073857West
+56378:  Horsethief Trail CO  380145North  1073745West
+46500:  Bighorn Ridge CO  380227North  1073533West
+46028:  Blackwall Mountain CO  380144North  1073353West
+51209:  Middle Canyon CO  380258North  1073339West
+--------------------------------------------------------------------------------
+;
+Command 9:	what_is_in	380122N	1074017W	30	6
+
+	The following 6 features were found in (1074017W +/- 6, 380122N +/- 30)
+56752:  KURA-FM (Ouray) CO  380122North  1074014West
+57123:  Ouray CO  380122North  1074017West
+74676:  Ouray Volunteer Fire Department CO  380123North  1074016West
+39239:  Radium Springs Swimming Pool CO  380145North  1074019West
+71713:  Ouray Hot Springs CO  380116North  1074021West
+70617:  Prince Lode Claims Mine CO  380053North  1074018West
+--------------------------------------------------------------------------------
+;
+; Exit:
+Command 10:	quit	
+
+Terminating execution of commands.
+End time: 2013/04/25 14:13:31
